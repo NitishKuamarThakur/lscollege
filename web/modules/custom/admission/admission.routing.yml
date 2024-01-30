@@ -1,0 +1,40 @@
+admission.add_admission:
+  path: '/admission/add'
+  defaults:
+    _form: '\Drupal\admission\Form\AddAdmissionForm'
+    _title: 'Add Admission Form'
+  requirements:
+    _permission: 'access content'
+    _access: 'TRUE'
+
+admission.edit_admission:
+  path: '/admission/{id}/edit'
+  defaults:
+    _form: '\Drupal\admission\Form\EditAdmissionForm'
+    _title_callback: '\Drupal\admission\Form\EditAdmissionForm:getTitle'
+  requirements:
+    _permission: 'access content'
+    _access: 'TRUE'
+
+admission.admission:
+  path: '/admission/{id}'
+  defaults:
+    _controller: '\Drupal\admission\Controller\AdmissionView:content'
+    _title_callback: '\Drupal\admission\Controller\AdmissionView:getTitle'
+  requirements:
+    _permission: 'access content'
+    _access: 'TRUE'
+  options:
+    no_cache: 'TRUE'
+
+admission.delete_admission:
+  path: '/admission/{id}/delete'
+  defaults:
+    _form: '\Drupal\admission\Form\DeleteAdmissionForm'
+    _title: 'Delete Admission'
+  requirements:
+    _permission: 'access content'
+    _access: 'TRUE'
+
+  
+

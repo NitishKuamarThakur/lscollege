@@ -1,0 +1,29 @@
+name: 'L S College'
+type: theme
+description: 'L S College subtheme based on Bootstrap 5 theme.'
+core_version_requirement: '^9.4 || ^10'
+'base theme': bootstrap5
+libraries:
+  - lscollege/global-styling
+ckeditor_stylesheets:
+  - css/style.css
+ckeditor5-stylesheets:
+  - css/ck5style.css
+regions:
+  header: Header
+  nav_branding: 'Navigation branding region'
+  nav_main: 'Main navigation region'
+  nav_additional: 'Additional navigation region (eg search form, social icons, etc)'
+  breadcrumb: Breadcrumbs
+  slideshow: Slideshow
+  content: 'Main content'
+  sidebar_first: 'Sidebar first'
+  sidebar_second: 'Sidebar second'
+  footer_1: 'Footer Col 1'
+  footer_2: 'Footer Col 2'
+  footer_3: 'Footer Col 3'
+  footer: Footer
+bootstrap5/global-styling:
+  css:
+    theme:
+      css/style.css: 'false'

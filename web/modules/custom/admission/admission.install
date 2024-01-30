@@ -1,0 +1,75 @@
+<?php
+
+use Drupal\Core\Database\Database;
+ 
+/**
+ * Implements hook_schema().
+ */
+function admission_schema(){
+    $schema['admission'] = array(
+        'description' => 'The table for storing the admission data.',
+        'fields' => array(
+            'id' => array(
+                'description' => 'The primary identifier for student',
+                'type' => 'serial',
+                'not null' => TRUE,
+                'unsigned' => TRUE,
+            ),
+            'name' => array(
+                'description' => 'Student name',
+                'type' => 'varchar',
+                'length' => 255,
+                'not null' => TRUE,
+                'default' => '',
+            ),
+           'father_name' => array(
+                'description' => 'Father name.',
+                'type' => 'varchar',
+                'length' => 255,
+                'not null' => TRUE,
+                'default' => '',
+            ),
+            'mother_name' => array(
+                 'description' => 'Mother name.',
+                 'type' => 'varchar',
+                 'length' => 255,
+                 'not null' => TRUE,
+                 'default' => '',
+            ),
+            'rollno' => array(
+                'description' => 'Roll Number.',
+                'type' => 'varchar',
+                'length' => 255,
+                'not null' => TRUE,
+                'default' => '',
+            ),
+            'dob' => array(
+                'description' => 'Date of Birth.',
+                'type' => 'varchar',
+                'length' => 255,
+                'not null' => TRUE,
+                'default' => '',
+            ),
+            'gender' => array(
+                'description' => 'Gender.',
+                'type' => 'varchar',
+                'length' => 255,
+                'not null' => TRUE,
+                'default' => '',
+            ),
+            'cretaed' => array(
+                'description' => 'Admission cretaed timestamp.',
+                'type' => 'int',
+                'length' => 11,
+                'not null' => TRUE,
+            ),
+            'updated' => array(
+                'description' => 'Admission updated timestamp.',
+                'type' => 'int',
+                'length' => 11,
+            ),
+        ),
+        'primary key' => array('id'),
+    );
+    return $schema;
+}
